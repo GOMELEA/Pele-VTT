@@ -1,0 +1,31 @@
+.suggestionsBox {
+    font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 1em;
+	position: absolute;
+	margin: 8px 0px 0px 0px;
+	width: 230px;
+	background-color: #fafafa;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border: 2px solid black;
+	color: #656463;
+	z-index: 200;
+}
+
+.suggestionList {
+	margin: 0px;
+	padding: 10px;
+	width: 215px;
+}
+
+.suggestionList li {
+	margin: 0px 0px 3px 0px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.suggestionList li:hover {
+	background-color: #656463;
+	color: #ffffff;
+	font-weight: bold;
+}

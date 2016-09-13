@@ -1,0 +1,102 @@
+<?php
+# Mets à zéro les variables copiées de la fiche de l'année précédente
+$tab['etablissement_scolaire']="";
+$tab['classe']="";
+$tab['petit_dej_tout']="";
+$tab['petit_dej_23']="";
+$tab['petit_dej_24']="";
+$tab['petit_dej_25']="";
+$tab['petit_dej_26']="";
+$tab['petit_dej_27']="";
+$tab['petit_dej_28']="";
+$tab['petit_dej_29']="";
+$tab['petit_dej_30']="";
+$tab['matine_tout']="";
+$tab['matine_23']="";
+$tab['matine_24']="";
+$tab['matine_25']="";
+$tab['matine_26']="";
+$tab['matine_27']="";
+$tab['matine_28']="";
+$tab['matine_29']="";
+$tab['matine_30']="";
+$tab['dejeuner_tout']="";
+$tab['dejeuner_23']="";
+$tab['dejeuner_24']="";
+$tab['dejeuner_25']="";
+$tab['dejeuner_26']="";
+$tab['dejeuner_27']="";
+$tab['dejeuner_28']="";
+$tab['dejeuner_29']="";
+$tab['dejeuner_30']="";
+$tab['apres_midi_tout']="";
+$tab['apres_midi_23']="";
+$tab['apres_midi_24']="";
+$tab['apres_midi_25']="";
+$tab['apres_midi_26']="";
+$tab['apres_midi_27']="";
+$tab['apres_midi_28']="";
+$tab['apres_midi_29']="";
+$tab['apres_midi_30']="";
+$tab['diner_tout']="";
+$tab['diner_23']="";
+$tab['diner_24']="";
+$tab['diner_25']="";
+$tab['diner_26']="";
+$tab['diner_27']="";
+$tab['diner_28']="";
+$tab['diner_29']="";
+$tab['diner_30']="";
+$tab['soiree_tout']="";
+$tab['soiree_23']="";
+$tab['soiree_24']="";
+$tab['soiree_25']="";
+$tab['soiree_26']="";
+$tab['soiree_27']="";
+$tab['soiree_28']="";
+$tab['soiree_29']="";
+$tab['soiree_30']="";
+$tab['tente_tout']="";
+$tab['tente_23']="";
+$tab['tente_24']="";
+$tab['tente_25']="";
+$tab['tente_26']="";
+$tab['tente_27']="";
+$tab['tente_28']="";
+$tab['tente_29']="";
+$tab['tente_30']="";
+$tab['parcours']="";
+$tab['intendance']="";
+$tab['velo']="";
+$tab['media']="";
+$tab['infirmerie']="";
+$tab['secretariat']="";
+$tab['technique']="";
+$tab['priere']="";
+$tab['reglement']="";
+$tab['observation']="";
+$tab['fiche_inscription_signee']="0";
+$tab['fiche_liaison']="0";
+if ($tab['type']=="staff" or $tab['type']=="collegien") $tab['charte_pelerin']="0";
+if ($tab['type']=="staff" or $tab['type']=="collegien" or $tab['type']=="animateur")
+	{
+		$tab['courriel']="";
+		$tab['telephone']="";
+		$tab['tel_mobile']="";
+	}
+	
+//$tab['diplome_medical_ok']="";
+//$tab['permis_ok']="";
+//$tab['diplome_encadrement_ok']=""; 
+$tab['besoin_vtt']="0";
+$tab['gg']="0";
+$tab['materiel_verifie']="";
+if (maketime($tab['validite_vaccination'])<maketime($_SESSION['jour_debut_precamp'])) 
+	{ $tab['certificat_vaccination']="";$tab['validite_vaccination']="";}
+$tab['manipulation_denrees']="";
+$tab['documents_signe']="";
+$tab['attestation_encadrement_ok']="";
+$tab['equipe']="";
+$tab['present_au_pele']="";
+$tab['casier']="";
+?>

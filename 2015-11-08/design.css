@@ -1,0 +1,117 @@
+body
+{
+	background-color:#fff9e5;
+}
+
+	/* Mise En Page */
+#global {
+	width:1000px;
+}
+#ban_g {
+	float: left;
+	height: 200px;
+	width: 45px;
+	background-image: url(design/ban_g.png);
+	background-repeat: no-repeat;
+}
+#ban_m {
+	text-align:left;
+	height: 200px;
+	width: 910px;
+	background-image: url(design/ban_m.png);
+	background-repeat: repeat-x;
+	float: left;
+}
+#ban_d {
+	background-image: url(design/ban_d.png);
+	background-repeat: no-repeat;
+	clear: none;
+	float: left;
+	height: 200px;
+	width: 45px;
+}
+#con_hg {
+	float: left;
+	height: 70px;
+	width: 45px;
+	background-image: url(design/con_hg.png);
+	background-repeat: no-repeat;
+}
+#con_hm {
+	float: left;
+	height: 70px;
+	width: 910px;
+	background-image: url(design/con_hm.png);
+	background-repeat: repeat-x;
+}
+#con_hd {
+	float: left;
+	height: 70px;
+	width: 45px;
+	background-image: url(design/con_hd.png);
+	background-repeat: no-repeat;
+}
+#con_m {
+	float: left;
+	width: 1000px;
+	min-height:200px;
+	background-image: url(design/con_m.png);
+	background-repeat: repeat-y;
+	text-align : center;
+}
+
+#con_bg {
+	background-image: url(design/con_bg.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 90px;
+	width: 45px;
+}
+#con_bm {
+	background-image: url(design/con_bm.png);
+	background-repeat: repeat-x;
+	float: left;
+	height: 90px;
+	width: 910px;
+}
+#con_bd {
+	background-image: url(design/con_bd.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 90px;
+	width: 45px;
+}
+#pdp_g {
+	float: left;
+	height: 100px;
+	width: 45px;
+	background-image: url(design/pdp_g.png);
+	background-repeat: no-repeat;
+}
+#pdp_m {
+	text-align:left;
+	height: 100px;
+	width: 910px;
+	background-image: url(design/pdp_m.png);
+	background-repeat: repeat-x;
+	float: left;
+}
+#pdp_d {
+	background-image: url(design/pdp_d.png);
+	background-repeat: no-repeat;
+	clear: none;
+	float: left;
+	height: 100px;
+	width: 45px;
+}
+
+
+		/* Styles de textes */
+.style1 
+{
+font-family		:	"Comic Sans MS";
+font-size		:	24px;
+color			:	#fff9e5;
+font-weight		:	bold;
+font-style		:	italic;
+}

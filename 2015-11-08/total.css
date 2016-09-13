@@ -1,0 +1,124 @@
+body
+{
+	background-color:#EFB554;
+}
+		/* Styles de textes */
+.titre1_noir 
+{
+	font-family: Tahoma;
+	font-size: 24px;font-weight: bold;
+}
+.titre2_noir 
+{
+	font-family: Tahoma;
+	font-size: 16px;font-weight: bold;
+}
+.titre3_noir 
+{
+	font-family: Tahoma;
+	font-size: 12px;font-weight: bold;
+}
+.titre2_anthracite
+{
+	font-family: Verdana;
+	font-size: 16px;color: #333333;
+	background-color: #CCCCCC;
+}
+.titre3_anthracite
+{
+	font-family: Verdana;
+	font-size: 12px;color: #333333;
+	background-color: #CCCCCC;
+}
+.titre4_anthracite
+{
+	font-family: Verdana;
+	font-size: 10px;color: #333333;
+	background-color: #CCCCCC;
+}
+.titre2_anthracite_sans_fond
+{
+	font-family: Verdana;
+	font-size: 16px;color: #333333;
+}
+.titre3_anthracite_sans_fond
+{
+	font-family: Verdana;
+	font-size: 12px;color: #333333;
+}
+.titre4_anthracite_sans_fond
+{
+	font-family: Verdana;
+	font-size: 10px;color: #333333;
+}
+.titre1_marron
+{
+	font-family: Tahoma;
+	font-size: 24px;font-weight: bold;
+	color: #967236;
+}
+.titre2_marron
+{
+	font-family: Tahoma;
+	font-size: 20px;font-weight: bold;
+	color: #967236;
+}
+.titre3_marron
+{
+	font-family: Tahoma;
+	font-size: 12px;font-weight: bold;
+	color: #967236;
+}
+.titre2_marron_clair
+{
+	font-family: Tahoma;
+	font-size: 20px;font-weight: bold;
+	color: #EFB554;
+}.titre3_marron_clair
+{
+	font-family: Tahoma;
+	font-size: 12px;font-weight: bold;
+	color: #EFB554;
+}
+/* Info Bulle */
+a.info_bulle span
+{								   
+    position       :  absolute;
+    top            :  -2000em;
+    left           :  -2000em;
+    width          :  1px;
+    height         :  1px;
+    overflow       :  hidden; 
+    background     :  #DDEEFF;   /* Définition du fond, sinon on a le même que notre lien */
+    border         :  1px solid #6699FF; /* Définition des bordures */
+} 
+
+a.info_bulle
+{				
+  color           : #2F368A;
+  
+  text-decoration : none; 
+  
+  padding         : 2px 16px 2px 2px; /*Définition des marges intérieures de notre lien */
+  
+  /* Définition de l'arrière plan de notre lien */
+  background      : transparent url('comment.gif') no-repeat right center;
+  
+  position        : relative; /* Indispensable pour le bon positionnement de l'info-bulle */ 
+}  
+ 
+a.info_bulle:hover 
+{
+  border          : 0;  /* ligne qui corrige le bug d'IE6 et inférieur */
+}  
+
+/* Rend visible tout notre bloc span et lui attribue une taille */
+a.info_bulle:hover span, a.info_bulle:focus span, a.info_bulle:active span 
+{
+    top        :  auto;
+    left       :  auto;
+    width      :  220px;
+    height     :  auto;
+    overflow   :  visible;
+	z-index		:	3;
+}    

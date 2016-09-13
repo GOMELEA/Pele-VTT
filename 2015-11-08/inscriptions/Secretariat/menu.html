@@ -1,0 +1,219 @@
+	<script type="text/javascript" src="menu.js"></script>
+    <link rel="stylesheet" media="screen" type="text/css" title="Menu" href="menu.css" />
+    <link rel="stylesheet" media="print" type="text/css" title="Menu" href="menu_print.css" />
+    <style type="text/css">
+<!--
+.Style1 {font-size: 20px;
+}
+-->
+    </style>
+    
+<ul id="menu">
+		<li>
+                <a href="synthese.php" >Synthèse</a>
+                <ul>
+                        <li><a href="synthese.php">Ma route</a></li>
+                        <li><a href="stat_collegien.php">Mes Stats Collégien</a></li>
+                        <li><a href="stat_staff.php">Mes Stats Staff</a></li>
+                        <li><a href="stat_animateur.php">Mes Stats Animateur</a></li>
+                        <li><a href="synthese_annee.php?Selection=2010">Tout 2010</a></li>
+                        <li><a href="synthese_annee.php?Selection=2011">Tout 2011</a></li>
+                        <li><a href="synthese_annee.php?Selection=2012">Tout 2012</a></li>
+                        <li><a href="synthese_annee.php?Selection=2013">Tout 2013</a></li>
+                        <li><a href="synthese_annee.php?Selection=2014">Tout 2014</a></li>
+                        <li><a href="synthese_annee.php?Selection=2015">Tout 2015</a></li>
+                        <li><a href="synthese_annee.php?Selection=2016">Tout 2016</a></li>
+                </ul>
+        </li>
+        
+        <li>
+                <a href="#">Listes</a>
+                <ul>
+                        <li><a href="liste_tous.php">Tous</a>
+							<ul>
+								<li><a href="liste_anniversaire.php">Anniversaire</a></li>
+								<li><a href="liste_tous.php?absent=oui">Absents</a></li>
+								<li><a href="liste_equipe.php">Par Equipe</a></li>
+								<li><a href="liste_telephone.php">Télephone des Responsables</a></li>
+								<li><a href="liste_diplome_encadrement.php">Encadrement</a></li>
+								<li><a href="liste_ddjs.php">DDCS</a></li>
+                            </ul>
+						</li>
+                       <li><a href="#">Collegiens</a>
+							<ul>
+								<li><a href="liste_jeunes.php?type=collegien&sexe=H">Garçon</a></li>
+								<li><a href="liste_jeunes.php?type=collegien&sexe=F">Fille</a></li>
+								<li><a href="liste_mvt.php?type=collegien">Mouvement/Paroisse</a></li>
+                            </ul>
+		  			  </li>
+                        <li><a href="#">Staff</a>
+							<ul>
+								<li><a href="liste_jeunes.php?type=staff&sexe=H">Garçon</a></li>
+								<li><a href="liste_jeunes.php?type=staff&sexe=F">Fille</a></li>
+								<li><a href="liste_mvt.php?type=staff">Mouvement/Paroisse</a></li>
+                            </ul>
+						</li>
+						<li><a href="liste_jeunes.php?type=animateur">Animateurs</a></li>
+                        <li><a href="liste_non_jeunes.php?type=abs">ABS</a></li>
+                        <li><a href="liste_non_jeunes.php?type=ttv">TTV</a>
+							<ul>
+								<li><a href="liste_ttv.php?poste=parcours">Parcours</a></li>
+								<li><a href="liste_ttv.php?poste=intendance">Intendance</a></li>
+								<li><a href="liste_ttv.php?poste=velo">Réparation Vélo</a></li>
+								<li><a href="liste_ttv.php?poste=media">Multi-Media</a></li>
+								<li><a href="liste_ttv.php?poste=infirmerie">Infirmerie</a></li>
+								<li><a href="liste_ttv.php?poste=secretariat">Secretariat</a></li>
+								<li><a href="liste_ttv.php?poste=technique">Technique</a></li>
+                            </ul>
+						</li>
+                        <li><a href="#">Présence Repas</a>
+							<ul>
+								<?php 
+									$date=maketime($_SESSION['jour_debut_precamp']);
+									for($i=0;$i < 8;$i++) 
+									{ echo '<li><a href="liste_presence_repas.php?date_repas='.(23+$i).'">'.date_fran($date+3600*24*$i).'</a></li>';}
+								?>
+                            </ul>
+						</li>
+                        
+                        <li><a href="liste_dvd.php">DVD</a>
+						</li>
+                        <li><a href="liste_instruments.php">Instruments</a>
+						</li>
+                        <li><a href="liste_competence.php">Compétences et Diplomes</a>
+						</li>
+                        
+                </ul>
+        </li>
+        
+        <li>
+                <a href="#">Autres listes</a>
+                <ul>
+                	<li><a href="liste_regime.php">Régimes Alimentaires</a>
+						</li>
+                        <li><a href="liste_observations.php">Observations</a>
+						</li>
+                        <li><a href="liste_courriel.php">Courriel</a>
+						</li>
+                        <li><a href="liste_SMS.php">SMS</a>
+						</li>
+                        <li><a href="liste_tshirt.php">T-Shirts</a>
+						</li>
+			<li><a href="export_fiche_xls.php">Export EXCEL des participants</a>
+						</li>
+                        <li><a href="liste_etiquette.php">Etiquettes des participants</a>
+						</li>
+                        <li><a href="#">Tous les Fabuleux GG</a>
+							<ul>
+								<?php 
+									$year=date ('Y');
+									for($i=0;$i < 2;$i++) 
+									{ echo '<li><a href="liste_courriel_gg.php?annee='.($year+$i-1).'">Courriel '.($year+$i-1).'</a></li>';}
+									for($i=0;$i < 2;$i++) 
+									{ echo '<li><a href="liste_gg.php?annee='.($year+$i-1).'">Trombinoscope '.($year+$i-1).'</a></li>';}
+								?>
+							</ul>
+                        </li>
+                       <li><a href="#">Trombinoscope</a>
+							<ul>
+								<li><a href="trombi.php?type=collegien">Collegiens</a></li>
+								<li><a href="trombi.php?type=staff">Staff</a></li>
+								<li><a href="trombi.php?type=animateur">Animateurs</a></li>
+								<li><a href="trombi.php?type=abs">ABS</a></li>
+								<li><a href="trombi.php?type=ttv&poste=parcours">TTV Parcours</a></li>
+								<li><a href="trombi.php?type=ttv&poste=intendance">TTV Intendance</a></li>
+								<li><a href="trombi.php?type=ttv&poste=velo">TTV Vélo</a></li>
+								<li><a href="trombi.php?type=ttv&poste=media">TTV Multi-Media</a></li>
+								<li><a href="trombi.php?type=ttv&poste=infirmerie">TTV Infirmerie</a></li>
+								<li><a href="trombi.php?type=ttv&poste=secretariat">TTV Secrétariat</a></li>
+								<li><a href="trombi.php?type=ttv&poste=technique">TTV Technique</a></li>
+								<li><a href="trombi.php?type=ttv&poste=priere">TTV Prière</a></li>
+                            </ul>
+		  			  </li>
+                </ul>
+        </li>
+        <li>
+                <a href="#">Suivi Inscription</a>
+                <ul>
+                        <li>
+                                <a href="liste_inscription_pas_ok.php">Liste Inscriptions en Attente</a>
+                        </li>
+                        <li>
+                                <a href="secretariat_fiche.php">Fiche Participant</a>
+                        </li>
+                        <li>
+                                <a href="secretariat_inscription.php">Fiche Inscription</a>
+                        </li>
+                        <li>
+                                <a href="liste_inscription_ok.php">Liste Inscriptions OK</a>
+                        </li>
+                        <li>
+                                <a href="gestion_attente.php">Gestion Liste d'attente</a>
+                        </li>
+                        <li>
+                                <a href="../../sommaire_inscription.php?toute_route=ok">Saisie Inscription</a>
+                        </li>
+                        <li>
+                                <a href="saisie_equipe.php">Saisie Equipe</a>
+                        </li>
+                </ul>
+        </li>
+        <li>
+                <a href="#">Bordereau</a> 
+                <ul>
+                        <li>
+                                <a href="bordereau_cheque.php">Chèques Bancaires</a>
+                        </li>
+                        <li>
+                                <a href="bordereau_cheque_vacances.php">Chèques Vacances</a>
+                        </li>
+                        <li>
+                                <a href="bordereau_caf.php">Passeport Loisir CAF</a>
+                        </li>
+                        <li>
+                                <a href="bordereau_liquide.php">Paiement Liquide</a>
+                        </li>
+                </ul>
+        </li>
+        <li>
+                <a href="#">Soutien</a>
+                <ul>
+                        <li>
+                                <a href="soutien.php?type=priere">Amicale Prière</a>
+                        </li>
+                        <li>
+                                <a href="soutien.php">Autres, mais pas des moindres</a>
+                        </li>
+                </ul>
+        </li>
+        <li>
+                <a href="#" >Configuration</a>
+                <ul>
+                        <li>
+                                <a href="config_route.php">Configuration des routes</a>
+                        </li>
+                        <li>
+                                <a href="gestion_equipe.php">Gestion des Equipes</a>
+                        </li>
+                        <li>
+                                <a href="carnet_priere.php">Carnet de Prières</a>
+                        </li>
+                        <li>
+                                <a href="gestion_code_recherche.php">Envoi des Codes de Fiches</a>
+                        </li>
+                        <li>
+                                <a href="mdp/gestion_mdp.php">Mots de Passe et Accès</a>
+                        </li>
+                        <li>
+                                <a href="modifications.php">Versions et Modifications</a>
+                        </li>
+                        <li>
+                                <a href="tutoriels.php">Tutoriels</a>
+                        </li>
+                </ul>
+  </li>
+		<li>
+                <a href="index.php" class="Style1" style="background:#74B574"><?php echo $_SESSION['annee'].' '.$_SESSION['departement']; ?></a>
+        </li>
+<br><br>
+</ul>

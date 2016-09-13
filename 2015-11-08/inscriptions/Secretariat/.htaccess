@@ -1,0 +1,8 @@
+AuthUserFile /srv/datadisk01/files/pelevtt/www/www.pele-vtt.fr/inscriptions/Secretariat/gwd.php
+AuthGroupFile /dev/null
+AuthName "Acces au site prive de gestion du Pele VTT"
+AuthType Basic
+
+<Limit GET POST>
+	require valid-user
+</Limit>

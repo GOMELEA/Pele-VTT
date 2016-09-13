@@ -1,0 +1,17 @@
+AuthUserFile /srv/datadisk01/files/pelevtt/www/www.pele-vtt.fr/inscriptions/Secretariat/mdp/gwd.php
+
+
+AuthGroupFile /dev/null
+
+AuthName "Acces à la page de gestion des mots de passes du Pélé VTT"
+
+AuthType Basic
+
+<Limit GET POST>
+
+require valid-user
+
+</Limit>
+
+
+
